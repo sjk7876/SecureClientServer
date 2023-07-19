@@ -6,17 +6,14 @@ Author: Spencer Kurtz
 """
 
 import requests
-from random import random
 
 def main():    
     while(True):
-        # message = input("Input message: ")
-        message = random() * 100000
+        message = input("Input message: ")
         
         params = {'message': message}
-        response = requests.post("http://localhost:8080/request", params=params)
+        requests.post("https://localhost:8443/request", params=params, verify=False)
         
-        # print(response)
         
 
 if (__name__ == "__main__"):
