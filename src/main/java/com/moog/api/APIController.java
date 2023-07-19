@@ -37,7 +37,7 @@ public class APIController {
      * ResponseEntity with HTTP status of NOT_FOUND if failed
      * ResponseEntity with HTTP status of INTERNAL_SERVER_ERROR otherwise
      */
-    @PostMapping("/request")
+    @PostMapping("/")
     public ResponseEntity<String> request(@RequestParam String message) {
         try {     
             LOG.info(message);       
